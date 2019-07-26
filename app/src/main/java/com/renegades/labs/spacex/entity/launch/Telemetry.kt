@@ -9,4 +9,4 @@ data class Telemetry(
 
     @SerialName("flight_club")
     val flightClub: String? = null
-)
+) : java.io.Serializable

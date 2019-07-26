@@ -15,4 +15,4 @@ data class LaunchSite(
 
     @SerialName("site_name_long")
     val siteNameLong: String? = null
-)
+) : java.io.Serializable

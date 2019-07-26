@@ -9,4 +9,4 @@ data class FirstStage(
 
     @SerialName("cores")
     val cores: List<Core?>? = null
-)
+) : java.io.Serializable

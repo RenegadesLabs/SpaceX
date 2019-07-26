@@ -13,4 +13,4 @@ data class LaunchFailureDetails(
 
     @SerialName("reason")
     val reason: String? = null
-)
+) : java.io.Serializable

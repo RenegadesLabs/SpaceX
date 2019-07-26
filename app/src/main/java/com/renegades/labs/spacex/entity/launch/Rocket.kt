@@ -24,4 +24,4 @@ data class Rocket(
 
     @SerialName("second_stage")
     val secondStage: SecondStage? = null
-)
+) : java.io.Serializable

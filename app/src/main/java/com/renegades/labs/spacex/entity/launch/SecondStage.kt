@@ -12,4 +12,4 @@ data class SecondStage(
 
     @SerialName("payloads")
     val payloads: List<Payload?>? = null
-)
+) : java.io.Serializable

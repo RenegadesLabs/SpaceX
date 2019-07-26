@@ -18,4 +18,4 @@ data class Fairings(
 
     @SerialName("ship")
     val ship: String? = null
-)
+) : java.io.Serializable

@@ -72,4 +72,4 @@ data class Timeline(
 
     @SerialName("webcast_liftoff")
     val webcastLiftoff: Int? = null
-)
+) : java.io.Serializable

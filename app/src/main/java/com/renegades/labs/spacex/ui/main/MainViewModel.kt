@@ -1,5 +1,4 @@
-package com.renegades.labs.spacex.ui.tabs.list
-
+package com.renegades.labs.spacex.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagedList
@@ -15,8 +14,7 @@ import io.reactivex.subjects.Subject
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
-
-class ListViewModel : ViewModel(), KoinComponent {
+class MainViewModel : ViewModel(), KoinComponent {
 
     val pagedLaunches: Subject<PagedList<Launch>> = ReplaySubject.create()
 
@@ -39,5 +37,4 @@ class ListViewModel : ViewModel(), KoinComponent {
     companion object {
         private const val PAGE_SIZE = 10
     }
-
 }

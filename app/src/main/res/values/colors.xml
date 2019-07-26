@@ -12,7 +12,9 @@
     <color name="secondaryDarkColor">#000051</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#ffffff</color>
+    <color name="paleBlue">#F1F2FC</color>
     <color name="failure">#D80000</color>
     <color name="success">#29CE00</color>
+    <color name="transparent_white">#7fff</color>
 
 </resources>

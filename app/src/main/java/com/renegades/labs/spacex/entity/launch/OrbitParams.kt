@@ -51,4 +51,4 @@ data class OrbitParams(
 
     @SerialName("semi_major_axis_km")
     val semiMajorAxisKm: Double? = null
-)
+) : java.io.Serializable

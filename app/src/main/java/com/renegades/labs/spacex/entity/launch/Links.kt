@@ -42,4 +42,4 @@ data class Links(
 
     @SerialName("youtube_id")
     val youtubeId: String? = null
-)
+) : java.io.Serializable

@@ -36,4 +36,4 @@ data class Core(
 
     @SerialName("reused")
     val reused: Boolean? = null
-)
+) : java.io.Serializable

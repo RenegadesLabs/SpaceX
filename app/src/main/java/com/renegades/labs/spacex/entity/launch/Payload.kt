@@ -39,4 +39,4 @@ data class Payload(
 
     @SerialName("reused")
     val reused: Boolean? = null
-)
+) : java.io.Serializable
