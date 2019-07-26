@@ -1,4 +1,4 @@
-package com.renegades.labs.spacex.datasource.launch.repo
+package com.renegades.labs.spacex.datasource.repo
 
 import com.renegades.labs.spacex.entity.Result
 import com.renegades.labs.spacex.entity.launch.Launch

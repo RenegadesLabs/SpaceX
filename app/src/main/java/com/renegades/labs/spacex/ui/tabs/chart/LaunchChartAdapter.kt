@@ -1,6 +1,6 @@
 package com.renegades.labs.spacex.ui.tabs.chart
 
-import com.renegades.labs.spacex.custom.chart.GenericChartAdapter
+import com.renegades.labs.spacex.custom.GenericChartAdapter
 import com.renegades.labs.spacex.entity.launch.Launch
 import java.text.SimpleDateFormat
 import java.util.*

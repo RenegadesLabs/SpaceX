@@ -55,9 +55,11 @@ class GalleryAdapter(val requestManager: RequestManager, val snackListener: (Str
                         .submit()
 
                     saveImage(future.get())
-
                     snackListener("Image saved in Pictures directory")
-                }, Throwable::printStackTrace)
+                }, {
+                    snackListener("Image saving failed")
+                    it.printStackTrace()
+                })
         }
 
         private fun saveImage(file: File) {
@@ -65,11 +67,7 @@ class GalleryAdapter(val requestManager: RequestManager, val snackListener: (Str
             val storageDir = getExternalStoragePublicDirectory(DIRECTORY_PICTURES)
             val imageFile = File(storageDir, imageFileName)
 
-            try {
-                copy(file, imageFile)
-            } catch (e: Throwable) {
-                e.printStackTrace()
-            }
+            copy(file, imageFile)
         }
 
         private fun copy(src: File, dst: File) {

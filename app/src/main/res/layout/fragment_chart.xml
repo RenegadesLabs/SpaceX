@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.renegades.labs.spacex.custom.chart.ChartView
+        <com.renegades.labs.spacex.custom.ChartView
             android:id="@+id/chart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

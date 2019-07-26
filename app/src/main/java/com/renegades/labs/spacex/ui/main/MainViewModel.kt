@@ -1,9 +1,9 @@
 package com.renegades.labs.spacex.ui.main
 
 import androidx.lifecycle.ViewModel
+import androidx.paging.DataSource
 import androidx.paging.PagedList
 import androidx.paging.RxPagedListBuilder
-import com.renegades.labs.spacex.datasource.launch.paging.LaunchDataSourceFactory
 import com.renegades.labs.spacex.entity.launch.Launch
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -18,7 +18,7 @@ class MainViewModel : ViewModel(), KoinComponent {
 
     val pagedLaunches: Subject<PagedList<Launch>> = ReplaySubject.create()
 
-    private val dataSourceFactory by inject<LaunchDataSourceFactory>()
+    private val dataSourceFactory by inject<DataSource.Factory<Int, Launch>>()
     private var disposable: Disposable? = null
     private val launchesObservable: Observable<PagedList<Launch>> = RxPagedListBuilder(dataSourceFactory, PAGE_SIZE)
         .setFetchScheduler(Schedulers.io())

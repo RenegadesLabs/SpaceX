@@ -1,5 +1,9 @@
 package com.renegades.labs.spacex.entity
 
+
+/**
+ *  Simplified copy of Kotlin's internal [kotlin.Result] class.
+ */
 class Result<out T> private constructor(private val value: Any?) {
 
     /**

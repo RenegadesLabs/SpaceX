@@ -1,4 +1,4 @@
-package com.renegades.labs.spacex.custom.chart
+package com.renegades.labs.spacex.custom
 
 abstract class GenericChartAdapter<T> : ChartView.ChartAdapter() {
 

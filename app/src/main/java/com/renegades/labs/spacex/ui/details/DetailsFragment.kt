@@ -2,12 +2,10 @@ package com.renegades.labs.spacex.ui.details
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,7 +22,6 @@ import java.util.concurrent.TimeUnit
 class DetailsFragment : Fragment() {
 
     private val args by navArgs<DetailsFragmentArgs>()
-    private val viewModel by viewModels<DetailsViewModel>()
     private lateinit var adapter: GalleryAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -34,7 +31,6 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter = GalleryAdapter(Glide.with(this)) { message ->
-            Log.d("myLogs", "show Snackbar!!!")
             Snackbar.make(containerDetails, message, Snackbar.LENGTH_LONG).show()
         }
         recyclerGallery.layoutManager = LinearLayoutManager(context)
